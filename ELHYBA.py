@@ -524,6 +524,5 @@ async def generator_and_about(app,m):
 
 app.start()
 bot.start()
-print("تم تشغيل البوت @U_7h1 ᬽᬽ| 
- ᬽᬽ@M_2A_E_S")
+print("تم تشغيل البوت")
 idle()

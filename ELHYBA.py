@@ -413,7 +413,7 @@ async def generator_and_about(app,m):
       text += f"\n\n✘𝑺𝑶𝑼𝑹𝑪𝑬 𝑪𝑯🦋: @Yosr3456"
       await m.reply(text, quote=True)
 
-    if m.text == "بـايـروجـرام":
+    if m.text == "بـايـروجـرام✘":
         rep = await m.reply(
         "**⏳ يـعالـج..**", reply_markup=ReplyKeyboardRemove ()
         ,quote=True)
@@ -472,7 +472,7 @@ async def generator_and_about(app,m):
 
 
 
-    if m.text == "تـيـلـيـثـون":
+    if m.text == "تـيـلـيـثـون✘":
         rep = await m.reply(
           "**⏳ يـعـالـج..**",
           reply_markup=ReplyKeyboardRemove ()

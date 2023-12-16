@@ -404,7 +404,7 @@ async def start_msg(app, message):
 
 @app.on_message(filters.text & filters.private)
 async def generator_and_about(app,m):
-    if m.text == "مـعـلـومـات عـن الـبـوت":
+    if m.text == "مـعـلـومـات عـن الـبـوت𖤐":
       text = ''
       text += "🐍 اللـغـة الـبـرمـجـيـة - بـايـثـون "
       text += f"\n✘🔥 اصـدار بايروجرام {v}"

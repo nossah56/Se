@@ -177,10 +177,10 @@ async def on_messages(c,m):
           username="@"+getUser["username"] if getUser["username"] else "None"
           language=botdb.get(f"LANG:{id}")
           text = f"- This user added to blacklist:\n\n"
-          text += f"𖡋 𝐔𝐒𝐄 ⌯  {username}"
-          text += f"\n𖡋 𝐍𝐀𝐌𝐄 ⌯  {name}"
-          text += f"\n𖡋 𝑳𝐀𝐍𝐆 ⌯  {language}"
-          text += f"\n𖡋 𝐈𝐃 ⌯  `{id}`"
+          text += f"𖡋 ✘𝐔𝐒𝐄𝑹 ⌯  {username}"
+          text += f"\n𖡋✘𝐍𝐀𝐌𝐄 ⌯  {name}"
+          text += f"\n𖡋 ✘𝑳𝐀𝐍𝐆 ⌯  {language}"
+          text += f"\n𖡋 ✘𝐈𝐃 ⌯  `{id}`"
           data = botdb.get("db"+token.split(":")[0])
           data["banned"].append(id)
           botdb.set("db"+token.split(":")[0],data)
@@ -207,10 +207,10 @@ async def on_messages(c,m):
           username="@"+getUser["username"] if getUser["username"] else "None"
           language=botdb.get(f"LANG:{id}")
           text = f"- This user deleted from blacklist:\n\n"
-          text += f"𖡋 𝐔𝐒𝐄 ⌯  {username}"
-          text += f"\n𖡋 𝐍𝐀𝐌𝐄 ⌯  {name}"
-          text += f"\n𖡋 𝑳𝐀𝐍𝐆 ⌯  {language}"
-          text += f"\n𖡋 𝐈𝐃 ⌯  `{id}`"
+          text += f"𖡋 ✘𝐔𝐒𝐄𝑹 ⌯  {username}"
+          text += f"\n𖡋 ✘𝐍𝐀𝐌𝐄 ⌯  {name}"
+          text += f"\n𖡋 ✘𝑳𝐀𝐍𝐆 ⌯  {language}"
+          text += f"\n𖡋 ✘𝐈𝐃 ⌯  `{id}`"
           data = botdb.get("db"+token.split(":")[0])
           data["banned"].remove(id)
           botdb.set("db"+token.split(":")[0],data)
@@ -237,10 +237,10 @@ async def on_messages(c,m):
           username="@"+getUser["username"] if getUser["username"] else "None"
           language=botdb.get(f"LANG:{id}")
           text = f"- This user added to admins list:\n\n"
-          text += f"𖡋 𝐔𝐒𝐄 ⌯  {username}"
-          text += f"\n𖡋 𝐍𝐀𝐌𝐄 ⌯  {name}"
-          text += f"\n𖡋 𝑳𝐀𝐍𝐆 ⌯  {language}"
-          text += f"\n𖡋 𝐈𝐃 ⌯  `{id}`"
+          text += f"𖡋 ✘𝐔𝐒𝐄𝑹 ⌯  {username}"
+          text += f"\n𖡋 ✘𝐍𝐀𝐌𝐄 ⌯  {name}"
+          text += f"\n𖡋 ✘𝑳𝐀𝐍𝐆 ⌯  {language}"
+          text += f"\n𖡋 ✘𝐈𝐃 ⌯  `{id}`"
           data = botdb.get("db"+token.split(":")[0])
           data["admins"].append(id)
           botdb.set("db"+token.split(":")[0],data)
@@ -267,10 +267,10 @@ async def on_messages(c,m):
           username="@"+getUser["username"] if getUser["username"] else "None"
           language=botdb.get(f"LANG:{id}")
           text = f"- This user deleted from admins list:\n\n"
-          text += f"𖡋 𝐔𝐒𝐄 ⌯  {username}"
-          text += f"\n𖡋 𝐍𝐀𝐌𝐄 ⌯  {name}"
-          text += f"\n𖡋 𝑳𝐀𝐍𝐆 ⌯  {language}"
-          text += f"\n𖡋 𝐈𝐃 ⌯  `{id}`"
+          text += f"𖡋 ✘𝐔𝐒𝐄𝑹 ⌯  {username}"
+          text += f"\n𖡋 ✘𝐍𝐀𝐌𝐄 ⌯  {name}"
+          text += f"\n𖡋 ✘𝑳𝐀𝐍𝐆 ⌯  {language}"
+          text += f"\n𖡋 ✘𝐈𝐃 ⌯  `{id}`"
           data = botdb.get("db"+token.split(":")[0])
           data["admins"].remove(id)
           botdb.set("db"+token.split(":")[0],data)
@@ -407,9 +407,10 @@ async def generator_and_about(app,m):
     if m.text == "مـعـلـومـات عـن الـبـوت":
       text = ''
       text += "🐍 اللـغـة الـبـرمـجـيـة - بـايـثـون "
-      text += f"\n🔥 اصـدار بايروجرام {v}"
-      text += f"\n🌱 اصـدار تـيـلـيـثـون {v2}"
-      text += f"\n\n👤 مـطـور الـبـوت: @U_7h1"
+      text += f"\n✘🔥 اصـدار بايروجرام {v}"
+      text += f"\n✘🌱 اصـدار تـيـلـيـثـون {v2}"
+      text += f"\n\n✘👤 مـطـور الـبـوت: @U_7h1"
+      text += f"\n\n✘𝑺𝑶𝑼𝑹𝑪𝑬 𝑪𝑯🦋: @Yosr3456"
       await m.reply(text, quote=True)
 
     if m.text == "بـايـروجـرام":
@@ -480,7 +481,7 @@ async def generator_and_about(app,m):
         c = TelegramClient(StringSession(), api_id, api_hash)
         await c.connect()
         await rep.delete()
-        phone_ask = await m.chat.ask( "⎆ يـرجـى إرسـال رقـم هاتفـك مـع رمـز الدولة مثــال 📱: \n+963995××××× ",
+        phone_ask = await m.chat.ask( "⎆ يـرجـى إرسـال رقـم هاتفـك مـع رمـز الدولة مثــال 📱: \n+201285××××× ",
           reply_to_message_id=m.id, filters=filters.text
         )
         phone = phone_ask.text

@@ -99,10 +99,10 @@ async def on_start(c,m):
       for admin in data["admins"]:
          text = f"– New user stats the bot :"
          username = "@"+m.from_user.username if m.from_user.username else "None"
-         text += f"\n\n𖡋 𝐔𝐒𝐄 ⌯  {username}"
-         text += f"\n𖡋 𝐍𝐀𝐌𝐄 ⌯  {m.from_user.mention}"
-         text += f"\n𖡋 𝐈𝐃 ⌯  `{m.from_user.id}`"
-         text += f"\n𖡋 𝐃𝐀𝐓𝐄 ⌯  **{date.today()}**"
+         text += f"\n\n𖡋 ✘𝐔𝐒𝐄𝑹 ⌯  {username}"
+         text += f"\n𖡋 ✘𝐍𝐀𝐌𝐄 ⌯  {m.from_user.mention}"
+         text += f"\n𖡋 ✘𝐈𝐃 ⌯  `{m.from_user.id}`"
+         text += f"\n𖡋 ✘𝐃𝐀𝐓𝐄 ⌯  **{date.today()}**"
          try: await c.send_message(admin, text, reply_markup=InlineKeyboardMarkup ([[InlineKeyboardButton (m.from_user.first_name,user_id=m.from_user.id)]]))
          except: pass
    data = {"name":m.from_user.first_name[:25], "username":m.from_user.username, "mention":m.from_user.mention(m.from_user.first_name[:25]),"id":m.from_user.id}
@@ -149,11 +149,11 @@ async def on_messages(c,m):
          mention=getUser["mention"]
          username="@"+getUser["username"] if getUser["username"] else "None"
          language=botdb.get(f"LANG:{id}")
-         text = f"𖡋 𝐔𝐒𝐄 ⌯  {username}"
-         text += f"\n𖡋 𝐍𝐀𝐌𝐄 ⌯  {name}"
-         text += f"\n𖡋 𝐈𝐃 ⌯  `{id}`"
-         text += f"\n𖡋 𝑳𝐀𝐍𝐆 ⌯  {language}"
-         text += f"\n𖡋 𝐀𝐂𝐂 𝑳𝐈𝐍𝐊 ⌯  **{mention}**"
+         text = f"𖡋 ✘𝐔𝐒𝐄𝑹 ⌯  {username}"
+         text += f"\n𖡋 ✘𝐍𝐀𝐌𝐄 ⌯  {name}"
+         text += f"\n𖡋 ✘𝐈𝐃 ⌯  `{id}`"
+         text += f"\n𖡋 ✘𝑳𝐀𝐍𝐆 ⌯  {language}"
+         text += f"\n𖡋 ✘𝐀𝐂𝐂 𝑳𝐈𝐍𝐊 ⌯  **{mention}**"
          return await m.reply(text,quote=True)
    
    if m.text and botdb.get(f"ban:{m.from_user.id}") and (m.from_user.id == ownerID or m.from_user.id in botdb.get("db"+token.split(":")[0])["admins"]):
@@ -387,9 +387,9 @@ async def start_msg(app, message):
       reply_markup = ReplyKeyboardMarkup(
         [
           [
-            KeyboardButton ("بـايـروجـرام"), KeyboardButton ("تـيـلـيـثـون")
+            KeyboardButton ("بـايـروجـرام✘"), KeyboardButton ("تـيـلـيـثـون✘")
           ],
-          [KeyboardButton ("مـعـلـومـات عـن الـبـوت")]
+          [KeyboardButton ("مـعـلـومـات عـن الـبـوت𖤐")]
         ],
         resize_keyboard=True, placeholder='استخراج جلسات'
       )
@@ -409,7 +409,7 @@ async def generator_and_about(app,m):
       text += "🐍 اللـغـة الـبـرمـجـيـة - بـايـثـون "
       text += f"\n✘🔥 اصـدار بايروجرام {v}"
       text += f"\n✘🌱 اصـدار تـيـلـيـثـون {v2}"
-      text += f"\n\n✘👤 مـطـور الـبـوت: @U_7h1"
+      text += f"\n\n✘👤 مـطـور الـبـوت: @U_7h1 | @S_A_2M"
       text += f"\n\n✘𝑺𝑶𝑼𝑹𝑪𝑬 𝑪𝑯🦋: @Yosr3456"
       await m.reply(text, quote=True)
 
